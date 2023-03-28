@@ -71,3 +71,15 @@ contract Chapter1 {
 
 
 }
+
+contract EtherConverter {
+    uint public weiAmount;
+    uint public etherAmount;
+    uint public gweiAmount;
+
+    function convert() public payable {
+        weiAmount = msg.value;
+        etherAmount = msg.value / 1 ether;
+        gweiAmount = msg.value / 1 gwei;
+    }
+}
