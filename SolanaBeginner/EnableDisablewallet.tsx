@@ -116,7 +116,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h2>Connect to Phantom Wallet</h2>
-      </header>
+      
       {provider && !walletKey && (
           <button
             style={{
@@ -130,6 +130,7 @@ function App() {
             Connect Wallet
           </button>
         )}
+        </header>
         {provider && walletKey && (
           <button
           style={{
@@ -137,6 +138,10 @@ function App() {
             padding: "15px",
             fontWeight: "bold",
             borderRadius: "5px",
+            position: "absolute",
+            top: "0",
+            right: "0",
+            margin: "10px",
           }}
           onClick={disconnectWallet}
         >
